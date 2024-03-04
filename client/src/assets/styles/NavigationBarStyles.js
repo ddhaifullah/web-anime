@@ -8,9 +8,14 @@ export const StyledNavBar = styled.nav`
     align-items: center;
     background-color: transparent;
     box-shadow: 0 4px 6px -6px #fff;
-    padding: 10px 20px;
+    padding: 5px 15px;
     border-radius: 10px;
     border: 1px solid #fff;
+
+    @media (max-width: 768px) {
+        width: 80%;
+
+    }
 `;
 
 export const StyledLogo = styled.div`
@@ -30,33 +35,39 @@ export const StyledNavLinks = styled.ul`
     margin: 0;
     padding: 0;
     display: flex;
-    transition: all 0.3s ease-in;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
     align-items: center;
+    overflow: hidden;
+    max-height: ${({ showNavLinks }) => (showNavLinks ? '500px' : '100px')};
 
     @media (max-width: 768px) {
-        display: ${({ showNavLinks }) => (showNavLinks ? 'flex' : 'none')};
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
+        width: 80%;
         position: absolute;
-        top: 71px;
-        left: 0;
-        background-color: transparent;
+        top: ${({ showNavLinks }) => (showNavLinks ? '71px' : '71px')};
+        left: 30px;
+        background-color: #242424;
         padding: 10px;
         border-radius: 0 0 10px 10px;
         border-radius: 10px;
         border: 1px solid #fff;
+        z-index: 999;
+        opacity: ${({ showNavLinks }) => (showNavLinks ? '1' : '0')};
+        transform: translateY(${({ showNavLinks }) => (showNavLinks ? '0' : '-10px')});
     }
 
     @media (min-width: 769px) {
         display: flex;
+        max-height: none;
     }
 
     a {
         text-decoration: none;
         color: #fff;
-        font-weight: bold;
         margin: 0 15px;
+        font-size: 1.0rem;
 
         &:hover {
             text-decoration: underline;

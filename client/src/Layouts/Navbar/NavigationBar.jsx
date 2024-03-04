@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyledNavBar, StyledNavLinks, StyledNavLink, StyledLogo, StyledProfile, StyledHamburgerIcon } from '../../assets/styles/NavigationBarStyles';
 import { Link } from 'react-router-dom';
-import { List } from '@phosphor-icons/react';
+import { TextAlignLeft, X  } from '@phosphor-icons/react';
 import InputSearch from '../../components/utils/Search/InputSearch';
 
 const NavigationBar = () => {
@@ -17,7 +17,7 @@ const NavigationBar = () => {
                 <h1>Logo</h1>
             </StyledLogo>
             <StyledHamburgerIcon onClick={toggleNavLinks}>
-                <List size={32} />
+                {showNavLinks ? <X size={32} /> : <TextAlignLeft size={32} />}
             </StyledHamburgerIcon>
             <StyledNavLinks showNavLinks={showNavLinks}>
                 <StyledNavLink><Link to="#">Home</Link></StyledNavLink>

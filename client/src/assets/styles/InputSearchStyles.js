@@ -10,6 +10,7 @@ export const InputSearchContainer = styled.div`
     box-shadow: 0 4px 6px -6px #fff;
     border-radius: 10px;
     border: 1px solid #fff;
+    transition: all 0.3s ease-in;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -28,5 +29,10 @@ export const InputSearchComponents = styled.input`
 
     &::placeholder {
         color: #fff;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
     }
 `;

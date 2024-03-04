@@ -1,24 +1,40 @@
-import React, { useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 import fetchAnimeData from '../../../services/AnimeAPI'
-import { HeroLeftContainer } from '../../../assets/styles/HeroStyles'
+import {
+    AnimeCard,
+    HeroLeftContainer,
+    ImageAnimeLeftCard,
+} from '../../../assets/styles/HeroStyles'
 
 
 const HeroLeft = () => {
+    const [animeData, setAnimeData] = useState(null);
+
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const animeData = await fetchAnimeData();
-                console.log(animeData);
-            } catch (error) {
-                console.error(error);
-            }
+        try {
+            const data = await fetchAnimeData();
+            console.log(data);
+            setAnimeData(data);
+        } catch (error) {
+            console.error(error);
+        }
         };
+
         fetchData();
     }, []);
-    
     return (
         <HeroLeftContainer>
-            <img src="https://via.placeholder.com/150" alt="anime" />
+            {animeData && animeData.data && animeData.data.ongoing_anime && (
+                <AnimeCard>
+                    {animeData.data.ongoing_anime.map((anime, index) => (
+                        <ImageAnimeLeftCard key={index}>
+                            <img src={anime.poster} alt={anime.title} />
+                            <h3>{anime.title}</h3>
+                        </ImageAnimeLeftCard>
+                    ))}
+                </AnimeCard>
+            )}
         </HeroLeftContainer>
     )
 }
