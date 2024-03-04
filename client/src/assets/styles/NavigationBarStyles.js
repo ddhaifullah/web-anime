@@ -10,7 +10,7 @@ export const StyledNavBar = styled.nav`
     box-shadow: 0 4px 6px -6px #fff;
     padding: 10px 20px;
     border-radius: 10px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
 `;
 
 export const StyledLogo = styled.div`
@@ -30,6 +30,8 @@ export const StyledNavLinks = styled.ul`
     margin: 0;
     padding: 0;
     display: flex;
+    transition: all 0.3s ease-in;
+    align-items: center;
 
     @media (max-width: 768px) {
         display: ${({ showNavLinks }) => (showNavLinks ? 'flex' : 'none')};
@@ -37,11 +39,13 @@ export const StyledNavLinks = styled.ul`
         align-items: flex-start;
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 71px;
         left: 0;
-        background-color: #3498db;
+        background-color: transparent;
         padding: 10px;
         border-radius: 0 0 10px 10px;
+        border-radius: 10px;
+        border: 1px solid #fff;
     }
 
     @media (min-width: 769px) {
@@ -55,7 +59,7 @@ export const StyledNavLinks = styled.ul`
         margin: 0 15px;
 
         &:hover {
-        text-decoration: underline;
+            text-decoration: underline;
         }
     }
 `;
