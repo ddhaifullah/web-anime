@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { HeroContainer } from '../../../assets/styles/HeroStyles'
 import HeroLeft from './HeroLeft';
 import HeroRight from './HeroRight';
