@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledNavBar = styled.nav`
-    width: 90%;
+    width: 95%;
     margin: 10px auto;
     display: flex;
     justify-content: space-between;
