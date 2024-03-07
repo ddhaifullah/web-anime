@@ -1,7 +1,7 @@
 import React from 'react'
-import Layouts from '../../Layouts'
-import InputSearch from '../utils/Search/InputSearch'
-import Hero from '../utils/Hero/Hero'
+import Layouts from '../Layouts'
+import Hero from '../components/Hero/Hero'
+
 
 const Home = () => {
     return (

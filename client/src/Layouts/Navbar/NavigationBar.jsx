@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyledNavBar, StyledNavLinks, StyledNavLink, StyledLogo, StyledProfile, StyledHamburgerIcon } from '../../assets/styles/NavigationBarStyles';
 import { Link } from 'react-router-dom';
 import { TextAlignLeft, X  } from '@phosphor-icons/react';
-import InputSearch from '../../components/utils/Search/InputSearch';
+import InputSearch from '../../components/Search/InputSearch';
 
 const NavigationBar = () => {
     const [showNavLinks, setShowNavLinks] = useState(false);
@@ -20,9 +20,9 @@ const NavigationBar = () => {
                 {showNavLinks ? <X size={32} /> : <TextAlignLeft size={32} />}
             </StyledHamburgerIcon>
             <StyledNavLinks showNavLinks={showNavLinks}>
-                <StyledNavLink><Link to="#">Home</Link></StyledNavLink>
+                <StyledNavLink><Link to="/">Home</Link></StyledNavLink>
                 <StyledNavLink><Link to="#">Anime</Link></StyledNavLink>
-                <StyledNavLink><Link to="#">Manga</Link></StyledNavLink>
+                <StyledNavLink><Link to="/genre_anime">Genres</Link></StyledNavLink>
                 <StyledNavLink><Link to="#">Novels</Link></StyledNavLink>
                 <InputSearch />
             </StyledNavLinks>
