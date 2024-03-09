@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchGenres } from '../../services/AnimeAPI';
 import { StyledGenres, GenreContainer, GenreItem, GenreTitle } from '../../assets/styles/GenresStyle';
 import Loading from '../utils/Loading';
+import { LinkUnderline } from '../../assets/styles/HeroStyles';
 
 const Genre = () => {
     const [genres, setGenres] = useState(null);
@@ -31,7 +32,9 @@ const Genre = () => {
                 <GenreContainer>
                     {genres && genres.map((genre, index) => (
                     <GenreItem key={index}>
-                        <GenreTitle>{genre.name}</GenreTitle>
+                        <LinkUnderline href={`/genres/${genre.slug}`}>
+                            <GenreTitle>{genre.name}</GenreTitle>
+                        </LinkUnderline>
                     </GenreItem>
                     ))}
                 </GenreContainer>

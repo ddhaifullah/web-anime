@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { fetchAnimeData } from '../../services/AnimeAPI';
 import {
     CardContainer,
@@ -8,6 +7,7 @@ import {
     HeroContainer,
     LinkUnderline
 } from '../../assets/styles/HeroStyles';
+import { TitleGlobal } from '../../assets/styles/GlobalStyle';
 import Loading from '../utils/Loading';
 
 const Hero = () => {
@@ -31,16 +31,17 @@ const Hero = () => {
     
     return (
         <>
+            <TitleGlobal>Ongoing Anime</TitleGlobal>
             {loading ? (<Loading />) :
                 (animeData && animeData.data && animeData.data.ongoing_anime && (
                     <HeroContainer>
                             {animeData.data.ongoing_anime.map((anime, index) => (
-                                <LinkUnderline key={index} href={`/anime/${anime.slug}`}>
-                                    <CardContainer>
-                                        <CardImage src={anime.poster} alt={anime.title} />
-                                        <CardTitle>{anime.title}</CardTitle>
-                                    </CardContainer>
-                                </LinkUnderline>
+                                <CardContainer key={index}>
+                                    <LinkUnderline href={`/anime/${anime.slug}`}>
+                                            <CardImage src={anime.poster} alt={anime.title} />
+                                            <CardTitle>{anime.title}</CardTitle>
+                                    </LinkUnderline>
+                                </CardContainer>
                             ))}
                         </HeroContainer>
                 )
