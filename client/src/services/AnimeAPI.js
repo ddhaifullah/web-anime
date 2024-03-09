@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiService = axios.create({
-    baseURL: process.env.ANIME_API,
+    baseURL: 'https://otakudesu-unofficial-api.rzkfyn.xyz/v1',
 });
 
 export const fetchAnimeData = async () => {
@@ -13,7 +13,7 @@ export const fetchAnimeData = async () => {
     }
 };
 
-export const fetchGenres = async () => {
+export const fetchGenres = async () =>  {
     try {
         const response = await apiService.get('genres');
         return response.data;

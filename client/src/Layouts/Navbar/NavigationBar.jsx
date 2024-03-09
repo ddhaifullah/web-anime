@@ -21,9 +21,9 @@ const NavigationBar = () => {
             </StyledHamburgerIcon>
             <StyledNavLinks showNavLinks={showNavLinks}>
                 <StyledNavLink><Link to="/">Home</Link></StyledNavLink>
-                <StyledNavLink><Link to="#">Anime</Link></StyledNavLink>
-                <StyledNavLink><Link to="/genre_anime">Genres</Link></StyledNavLink>
-                <StyledNavLink><Link to="#">Novels</Link></StyledNavLink>
+                <StyledNavLink><Link to="/release">Jadwal</Link></StyledNavLink>
+                <StyledNavLink><Link to="/genre_anime">Genre</Link></StyledNavLink>
+                <StyledNavLink><Link to="#">Semua</Link></StyledNavLink>
                 <InputSearch />
             </StyledNavLinks>
             <StyledProfile>

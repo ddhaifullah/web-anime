@@ -31,4 +31,17 @@ export const CardImage = styled.img`
 
 export const CardTitle = styled.h3`
     margin: 0;
+    font-size: 12px;
+    color: #ff;
+`;
+
+export const LinkUnderline = styled.a`
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-bottom: 1px solid #ccc;
+    }
 `;
