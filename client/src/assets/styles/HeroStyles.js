@@ -20,6 +20,11 @@ export const CardContainer = styled.div`
     border: 1px solid #ccc;
     border-radius: 8px;
     text-align: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 `;
 
 export const CardImage = styled.img`
@@ -38,10 +43,5 @@ export const CardTitle = styled.h3`
 export const LinkUnderline = styled.a`
     text-decoration: none;
     color: #fff;
-    border-bottom: 1px solid #fff;
     transition: all 0.3s ease;
-
-    &:hover {
-        border-bottom: 1px solid #ccc;
-    }
 `;

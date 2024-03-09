@@ -21,3 +21,21 @@ export const fetchGenres = async () =>  {
         throw error;
     }
 };
+
+export const fetchAnimeDetail = async (slug) => {
+    try {
+        const response = await apiService.get(`/anime/${slug}`);
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};
+
+export const fetchGenresDetail = async (slug) => {
+    try {
+        const response = await apiService.get(`/genres/${slug}`);
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};

@@ -1,32 +1,30 @@
-# web-anim
+# Web Anim
 
-## Description
-Website anime ini di bangun mengguanakan ReactJs di sisi frontend dan NestJs di sisi backend.Website ini di bangun untuk kepemilikan pribadi sebagai portofolio.
+Web Anim adalah proyek yang dibuat untuk menampilkan dan mengeksplorasi informasi mengenai anime. Proyek ini menggunakan React dan menyediakan informasi seperti detail anime, genre, dan batch.
 
-## Installation
-```bash
-$ git clone https://github.com/ddhaifullah/web-anim.git
-$ cd web-anim
-$ cd client | cd server
-$ npm install
-$ npm start
-```
+## Fitur
 
-## License
-[MIT](
-    ./LICENSE
-)
+- Tampilkan detail anime, termasuk gambar poster, judul, rating, tipe, status, durasi, tanggal rilis, dan studio.
+- Menampilkan genre anime dengan link ke halaman detail genre.
+- Tampilkan informasi batch anime, termasuk episode, link, dan tanggal upload.
+- Tampilkan sinopsis anime dengan tata letak yang responsif.
 
-## Contact
-[LinkedIn](https://www.linkedin.com/in/dhia-dhaifullah-7b3b3b1a3/) <br>
-[Github](https://github.com/ddhaifullah) <br>
-[Instagram](https://www.instagram.com/dhia.dhaifullah/) <br>
-[Twitter](https://twitter.com/ddhaifullah) <br>
-[Facebook](https://www.facebook.com/dhia.dhaifullah.3) <br>
-[Email](mailto:105841108621@student.unismuh.ac.id) <br>
-[Website](https://ddhaifullah.github.io/) <br>
-[Phone](tel:+6205757562962) <br>
-[Whatsapp](https://wa.me/+6205757562962) <br>
-[Telegram](https://t.me/ddhaifullah) <br>
-[Line](https://line.me/ti/p/~ddhaifullah) <br>
-[Skype](https://join.skype.com/invite/eq3Z3Z3Z3Z3Z) <br>
+## Penggunaan
+
+1. Pastikan Anda telah menginstal Node.js dan npm di sistem Anda.
+2. Clone repositori ini dengan menjalankan perintah: `git clone https://github.com/username/web-anim.git`.
+3. Masuk ke direktori proyek: `cd web-anim`.
+4. Instal dependensi dengan perintah: `npm install`.
+5. Jalankan proyek dengan perintah: `npm start`.
+6. Disini saya menggunakan API Publiic dari [otakudesu-scraper](https://github.com/rzkfyn/otakudesu-scraper)
+
+## Kontribusi
+
+Anda dapat berkontribusi pada proyek ini dengan mengirimkan _pull request_. Pastikan untuk membaca pedoman kontribusi sebelumnya.
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+Terima kasih telah berkontribusi!
+
